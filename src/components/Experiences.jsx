@@ -31,7 +31,7 @@ const experiences = [
 
 const Experiences = () => {
   return (
-    <section id="experiences" className="py-20 bg-emerald-50">
+    <section id="experiences" className="py-20 bg-brand-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">Experiences</h2>
@@ -46,10 +46,10 @@ const Experiences = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: (i % 6) * 0.06, duration: 0.5 }}
-              className="rounded-xl bg-white p-6 shadow-sm hover:shadow-lg border border-emerald-100"
+              className="rounded-xl bg-white p-6 shadow-sm hover:shadow-lg border border-brand-100"
             >
               <div className="flex items-center gap-3">
-                <div className="h-11 w-11 grid place-items-center rounded-full bg-emerald-100 text-emerald-700">
+                <div className="h-11 w-11 grid place-items-center rounded-full bg-brand-100 text-brand-700">
                   <Icon className="h-6 w-6" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900">{title}</h3>

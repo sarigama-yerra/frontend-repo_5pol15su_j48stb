@@ -5,17 +5,30 @@ import Experiences from './components/Experiences'
 import Commitment from './components/Commitment'
 import Contact from './components/Contact'
 import WhatsAppFloat from './components/WhatsAppFloat'
+import { Routes, Route } from 'react-router-dom'
+import DestinationDetail from './pages/DestinationDetail'
+
+function HomePage() {
+  return (
+    <>
+      <Hero />
+      <Destinations />
+      <Experiences />
+      <Commitment />
+      <Contact />
+    </>
+  )
+}
 
 function App() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <Navbar />
       <main>
-        <Hero />
-        <Destinations />
-        <Experiences />
-        <Commitment />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/destinations/:slug" element={<DestinationDetail />} />
+        </Routes>
       </main>
       <footer className="border-t bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm text-gray-600 flex flex-col sm:flex-row items-center justify-between gap-4">

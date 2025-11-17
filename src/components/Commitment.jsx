@@ -26,8 +26,8 @@ const Commitment = () => {
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {badges.map((b) => (
-            <div key={b.title} className="rounded-2xl border border-gray-100 p-6 shadow-sm bg-gradient-to-br from-white to-emerald-50/30">
-              <h3 className="text-lg font-semibold text-emerald-800">{b.title}</h3>
+            <div key={b.title} className="rounded-2xl border border-gray-100 p-6 shadow-sm bg-gradient-to-br from-white to-brand-50/30">
+              <h3 className="text-lg font-semibold text-brand-800">{b.title}</h3>
               <p className="mt-2 text-gray-600">{b.desc}</p>
             </div>
           ))}

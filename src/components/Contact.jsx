@@ -10,7 +10,6 @@ const Contact = () => {
     const email = form.get('email')
     const message = form.get('message')
 
-    // Compose WhatsApp link as fallback submit action
     const text = encodeURIComponent(`Hi Karachie Safaris, I am ${name} (${email}). ${message}`)
     const href = `https://wa.me/254700000000?text=${text}`
     window.open(href, '_blank')
@@ -18,7 +17,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-20 bg-emerald-50">
+    <section id="contact" className="py-20 bg-brand-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-2 items-center">
           <div>
@@ -31,13 +30,13 @@ const Contact = () => {
             </ul>
           </div>
 
-          <form onSubmit={onSubmit} className="rounded-2xl bg-white p-6 shadow-sm border border-emerald-100">
+          <form onSubmit={onSubmit} className="rounded-2xl bg-white p-6 shadow-sm border border-brand-100">
             <div className="grid gap-4">
-              <input name="name" required placeholder="Your name" className="w-full rounded-lg border-gray-200 focus:border-emerald-500 focus:ring-emerald-500" />
-              <input name="email" type="email" required placeholder="Email address" className="w-full rounded-lg border-gray-200 focus:border-emerald-500 focus:ring-emerald-500" />
-              <textarea name="message" rows="4" required placeholder="Tell us about your trip" className="w-full rounded-lg border-gray-200 focus:border-emerald-500 focus:ring-emerald-500"></textarea>
-              <button className="inline-flex justify-center rounded-full bg-emerald-600 text-white px-6 py-3 font-semibold hover:bg-emerald-700">Send via WhatsApp</button>
-              {status && <p className="text-sm text-emerald-700">{status}</p>}
+              <input name="name" required placeholder="Your name" className="w-full rounded-lg border-gray-200 focus:border-brand-500 focus:ring-brand-500" />
+              <input name="email" type="email" required placeholder="Email address" className="w-full rounded-lg border-gray-200 focus:border-brand-500 focus:ring-brand-500" />
+              <textarea name="message" rows="4" required placeholder="Tell us about your trip" className="w-full rounded-lg border-gray-200 focus:border-brand-500 focus:ring-brand-500"></textarea>
+              <button className="inline-flex justify-center rounded-full bg-brand-600 text-white px-6 py-3 font-semibold hover:bg-brand-700">Send via WhatsApp</button>
+              {status && <p className="text-sm text-brand-700">{status}</p>}
             </div>
           </form>
         </div>
